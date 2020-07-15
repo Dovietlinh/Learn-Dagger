@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Teko_Test</string>
+    <string name="title_text">Màn hình LCD HKC 31.5" M32A7Q</string>
+    <string name="hint_text_search">Nhập tên, mã sản phẩm</string>
+    <string name="sku_product">Mã SP:</string>
+    <string name="tam_het_hang">Tạm hết hàng</string>
+    <string name="load_more">Hiển thị nhiều hơn</string>
+    <string name="description_header">Mô tả sản phẩm</string>
+    <string name="info_product_header">Thông số kỹ thuật</string>
+    <string name="so_sanh_gia">So sánh giá</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

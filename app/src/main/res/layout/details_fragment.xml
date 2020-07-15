@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF">
+
+    <ImageView
+        android:id="@+id/imgBackDetails"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_margin="12dp"
+        android:onClick="backFragment"
+        android:src="@mipmap/ic_arrow_back"
+        android:tint="#000000"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/titleDetails"
+        style="@style/SFProText_Regular"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="@string/title_text"
+        android:textStyle="bold"
+        android:textSize="13sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvSellPriceHeader"
+        style="@style/SFProText_Semibold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="10.420.000 đ"
+        android:textSize="13sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/titleDetails" />
+
+    <ImageView
+        android:id="@+id/imgCartOutlined"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginVertical="12dp"
+        android:layout_marginEnd="16dp"
+        android:src="@mipmap/ic_cart_outlined"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        android:layout_margin="16dp"
+        android:background="@drawable/bg_border_oval"
+        android:gravity="center"
+        android:text="2"
+        android:textColor="@color/white"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toBottomOf="@+id/imgCartOutlined"
+        app:layout_constraintStart_toStartOf="@+id/imgCartOutlined" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="4dp"
+        android:background="@color/paleGrey"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvSellPriceHeader" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toTopOf="@+id/constraintLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.viewpager.widget.ViewPager
+                android:id="@+id/pagerImage"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginHorizontal="24dp"
+                app:layout_constraintDimensionRatio="h,1:1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.viewpagerindicator.CirclePageIndicator
+                android:id="@+id/indicator"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="@+id/pagerImage"
+                app:layout_constraintStart_toStartOf="@+id/pagerImage"
+                app:layout_constraintTop_toBottomOf="@+id/pagerImage" />
+
+            <View
+                android:id="@+id/view2"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="16dp"
+                android:background="@color/paleGrey"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/indicator" />
+
+            <TextView
+                android:id="@+id/txtTitleDetail"
+                style="@style/Style_Title_Details"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="12dp"
+                android:text="@string/title_text"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/view2" />
+
+            <TextView
+                android:id="@+id/skuTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="@string/sku_product"
+                android:textColor="@color/coolGrey"
+                android:textSize="12dp"
+                app:layout_constraintStart_toStartOf="@id/txtTitleDetail"
+                app:layout_constraintTop_toBottomOf="@id/txtTitleDetail" />
+
+            <TextView
+                android:id="@+id/tvSkuProduct"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="4dp"
+                android:text="9187691276"
+                android:textColor="@color/deepSkyBlue"
+                android:textSize="12dp"
+                app:layout_constraintStart_toEndOf="@id/skuTitle"
+                app:layout_constraintTop_toBottomOf="@id/txtTitleDetail" />
+
+            <TextView
+                android:id="@+id/statusProduct"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/bg_border_status"
+                android:paddingHorizontal="8dp"
+                android:paddingVertical="3dp"
+                android:text="@string/tam_het_hang"
+                android:textColor="@color/coolGrey"
+                android:textSize="12dp"
+                app:layout_constraintStart_toStartOf="@+id/skuTitle"
+                app:layout_constraintTop_toBottomOf="@+id/skuTitle" />
+
+            <TextView
+                android:id="@+id/tvSellPrice"
+                style="@style/SFProText_Semibold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="10.420.000 đ"
+                android:textSize="14dp"
+                app:layout_constraintStart_toStartOf="@+id/statusProduct"
+                app:layout_constraintTop_toBottomOf="@+id/statusProduct" />
+
+            <TextView
+                android:id="@+id/tvSupplierSalePrice"
+                style="@style/style_sell_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="8dp"
+                android:text="12.970.000 đ"
+                android:textSize="12dp"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="@+id/tvSellPrice"
+                app:layout_constraintStart_toEndOf="@+id/tvSellPrice"
+                app:layout_constraintTop_toBottomOf="@+id/statusProduct" />
+
+            <View
+                android:id="@+id/view4"
+                android:layout_width="0dp"
+                android:layout_height="8dp"
+                android:layout_marginTop="12dp"
+                android:background="@color/paleGrey"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvSellPrice" />
+
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/tabContainer"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/view4"
+                app:tabGravity="fill"
+                app:tabIndicatorColor="@color/reddishOrange"
+                app:tabInlineLabel="true"
+                app:tabSelectedTextColor="@color/darkGrey"
+                app:tabTextColor="@color/coolGrey" />
+
+            <androidx.viewpager.widget.ViewPager
+                android:id="@+id/vpInfoProduct"
+                android:layout_width="0dp"
+                android:layout_height="800dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tabContainer" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ImageView
+            android:id="@+id/imgRemoveCicle"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginVertical="20dp"
+            android:layout_marginStart="16dp"
+            android:src="@mipmap/ic_remove_cicle"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/imgAddCicle"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginVertical="20dp"
+            android:layout_marginStart="56dp"
+            android:src="@mipmap/ic_add_cicle"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@id/imgRemoveCicle"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2"
+            android:textColor="@color/darkGrey"
+            android:textSize="15sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/imgAddCicle"
+            app:layout_constraintStart_toEndOf="@+id/imgRemoveCicle"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:id="@+id/view3"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginVertical="8dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/bg_border_button"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/imgAddCicle"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginStart="16dp"
+            android:src="@mipmap/ic_add_to_cart"
+            app:layout_constraintBottom_toBottomOf="@+id/view3"
+            app:layout_constraintStart_toStartOf="@+id/view3"
+            app:layout_constraintTop_toTopOf="@+id/view3" />
+
+        <TextView
+            android:id="@+id/tvButtom"
+            style="@style/style_sell_price_bottom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:text="20.840.000 đ"
+            app:layout_constraintBottom_toBottomOf="@+id/view3"
+            app:layout_constraintEnd_toEndOf="@+id/view3"
+            app:layout_constraintTop_toTopOf="@+id/view3" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!--    <com.tbuonomo.viewpagerdotsindicator.SpringDotsIndicator-->
+    <!--        android:id="@+id/listImageView"-->
+    <!--        android:layout_width="0dp"-->
+    <!--        android:layout_height="300dp"-->
+    <!--        android:layout_marginStart="24dp"-->
+    <!--        app:dotsColor="@color/tomato"-->
+    <!--        app:dotsStrokeColor="@color/paleGrey"-->
+    <!--        app:dotsSize="8dp"-->
+    <!--        android:layout_marginEnd="24dp"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintTop_toBottomOf="@+id/view" />-->
+</androidx.constraintlayout.widget.ConstraintLayout>

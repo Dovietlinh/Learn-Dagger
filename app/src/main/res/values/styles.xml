@@ -1,0 +1,42 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/tomato</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="SFProText_Semibold">
+        <item name="android:textColor">@color/tomato</item>
+        <item name="android:textSize">15dp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="SFProText_Regular">
+        <item name="android:textColor">@color/darkGrey</item>
+        <item name="android:textSize">14dp</item>
+    </style>
+
+    <style name="Style_Title_Details">
+        <item name="android:textColor">@color/darkGrey</item>
+        <item name="android:textSize">17dp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="style_sell_price">
+        <item name="android:textColor">@color/coolGrey</item>
+        <item name="android:textSize">12dp</item>
+    </style>
+
+    <style name="style_sell_price_bottom">
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:textSize">15dp</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+</resources>
